@@ -12,6 +12,7 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+       
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
             tailwind.config = {
@@ -24,6 +25,7 @@
                 },
             };
         </script>
+        <script src="https://unpkg.com/alpinejs" defer></script>
         <title>LaraGigs | Find Laravel Jobs & Projects</title>
     </head>
     <body class="mb-48">
@@ -59,5 +61,7 @@
                 >Post Job</a
             >
         </footer>
+
+        <x-flash-messages />
 </body>
 </html>
