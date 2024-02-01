@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Listing;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -40,5 +41,11 @@ class UserFactory extends Factory
         return $this->state(fn (array $attributes) => [
             'email_verified_at' => null,
         ]);
+    }
+
+    // Relationship With Listings
+    public function listings()
+    {
+        return $this->hasMany(Listing::class, 'user_id');
     }
 }
